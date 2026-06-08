@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Flappy Tech Bird</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- MENU -->
+
+    <div id="menu">
+
+        <h1>🐦 FLAPPY TECH BIRD</h1>
+
+        <h3 id="ultimoJogador"></h3>
+
+        <p>
+            Desvie dos canos e faça a maior pontuação possível!
+        </p>
+
+        <div id="rankingBox">
+
+            <h2>🏆 Ranking</h2>
+
+            <div id="ranking"></div>
+
+        </div>
+
+        <input
+        type="text"
+        id="nomeJogador"
+        placeholder="Digite seu nome"
+        maxlength="15">
+
+        <br>
+
+        <button onclick="iniciarJogo()">
+            JOGAR
+        </button>
+
+        <button onclick="mostrarTutorial()">
+            COMO JOGAR
+        </button>
+
+        <div id="tutorial">
+
+            Clique na tela ou pressione qualquer tecla para voar.
+
+            <br><br>
+
+            Passe pelos canos sem bater neles.
+
+            <br><br>
+
+            Faça a maior pontuação possível.
+
+        </div>
+
+    </div>
+
+    <!-- JOGO -->
+
+    <div id="jogo">
+
+        <h2>
+            Jogador:
+            <span id="jogadorAtual"></span>
+        </h2>
+
+        <h2>
+            Pontos:
+            <span id="score">0</span>
+        </h2>
+
+        <canvas
+        id="game"
+        width="400"
+        height="600">
+        </canvas>
+
+        <br>
+
+        <button onclick="voltarMenu()">
+            Voltar ao Menu
+        </button>
+
+    </div>
+
+    <!-- GAME OVER -->
+
+    <div id="gameOver">
+
+        <h1>GAME OVER</h1>
+
+        <h2 id="finalScore"></h2>
+
+        <h3 id="recorde"></h3>
+
+        <button onclick="reiniciarJogo()">
+            Jogar Novamente
+        </button>
+
+        <button onclick="voltarMenu()">
+            Menu Principal
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
